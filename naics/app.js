@@ -40,7 +40,7 @@ app.get("/above", (req, res) => {
 });
 
 app.post("/wcc", (req, res) => {
-    axios.post(`http://localhost/rest/wcc`, req.body)
+    axios.post(`https://vm104.datacubes.io/rest/wcc`, req.body)
     .then(r=>{
         return res.json(r.data);
     })
