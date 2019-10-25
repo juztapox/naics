@@ -59,8 +59,10 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-      host: 'vm104.datacubes.io',
-      HOST: 'vm104.datacubes.io'
+      host:  process.env.NODE_ENV == 'production' ? 'vm104.datacubes.io' : 'localhost',
+      HOST: process.env.NODE_ENV == 'production' ? 'vm104.datacubes.io' : 'localhost',
+      port: '3001',
+      PORT: '3001'
   },
   /*
   ** Build configuration

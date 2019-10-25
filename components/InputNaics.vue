@@ -50,7 +50,7 @@ export default {
 			let queries = query.split(' ')
 			for (let index = 0; index < queries.length; index++) {
 				const q = queries[index]
-				let res = await this.$axios.$get(`/?query=${q}`, {port: 3001})
+				let res = await this.$axios.$get(`/?query=${q}`)
 				combined = combined.concat(res)
 			}
 
