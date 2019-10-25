@@ -2,14 +2,13 @@
 	<div class="form-container">
 		<div class="form-main">
 			<InputText
-				label="Operations Code Search"
 				info="Select one or more operations that describe your business."
 			>
 				<InputNaics @select="addCode"></InputNaics>
 			</InputText>
 			<div class="mt-8">
 				<div
-					class="code-card flex items-center relative mt-5 rounded p-4 shadow bg-white font-medium text-gray-700"
+					class="code-card flex items-center relative mt-5 rounded p-4 shadow-md bg-white font-medium text-gray-700"
 					v-for="code in naics_codes"
 					:key="code.$index"
 				>
@@ -30,7 +29,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="form-aside">
+		<div class="form-aside overflow-y-scroll bg-white rounded-lg shadow px-6 py-4" style="margin-top: 35px;" v-show="suggestions.length">
 			<div v-show="suggestions.length">
 				<h3 class="text-lg font-bold">Suggested Operations</h3>
 				<p
@@ -38,11 +37,12 @@
 				>We've collected some more operations related to your current selections. Add them as you see fit.</p>
 				<ul class="mt-6">
 					<li
-						class="suggestion font-medium px-3 py-2 flex items-center rounded hover:bg-gray-200 hover:text-gray-900 cursor-pointer"
+						class="suggestion font-medium px-3 py-2 flex items-center rounded hover:bg-gray-100 hover:text-gray-900 cursor-pointer border-t first:border-t-0"
 						v-for="code in suggestions"
 						:key="code.index"
 						@click="addCode(code)"
 					>
+                        <i class="fa fa-plus mr-4 text-sm text-gray-400"></i>
 						<span class="text-sm leading-snug">{{code.title}}</span>
 					</li>
 				</ul>
@@ -122,5 +122,9 @@ export default {
 	&:hover a {
 		opacity: 1;
 	}
+}
+
+.form-aside {
+    height: 560px
 }
 </style>

@@ -12,8 +12,8 @@ function state() {
 				path: '/form/location'
 			},
 			{
-				title: 'Search',
-				path: '/form/search',
+				title: 'Operations',
+				path: '/form/operations',
             },
             {
                 title: 'Description',

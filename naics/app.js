@@ -13,7 +13,8 @@ let vm = 'https://vm104.datacubes.io'
 
 // Routes
 app.get("/", (req, res) => {
-	let results = NAICS.search(req.query.query);
+    let results = NAICS.search(req.query.query);
+    results = results.filter(r=>r.code.toString().length == 6)    
 	return res.json(results);
 });
 
@@ -23,7 +24,8 @@ app.get("/find", (req, res) => {
 });
 
 app.get("/below", (req, res) => {
-	let results = NAICS.below(req.query.query);
+    let results = NAICS.below(req.query.query);
+    results = results.filter(r=>r.code.toString().length == 6)    
 	results = results.map(r => {
 		return { code: r.code, title: r.title };
 	});
@@ -32,7 +34,8 @@ app.get("/below", (req, res) => {
 
 app.get("/above", (req, res) => {
 	let results = NAICS.above(req.query.query);
-	results = results.map(r => {
+    results = results.filter(r=>r.code.toString().length == 6)    
+    results = results.map(r => {
 		return { code: r.code, title: r.title };
 	});
 	return res.json(results);

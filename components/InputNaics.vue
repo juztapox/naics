@@ -9,12 +9,12 @@
 		</div>
 		<ul v-if="results.length" class="results overflow-hidden absolute relative mt-2 bg-white rounded-lg shadow-xl" aria-haspopup="true">
 			<li
-				class="block px-2 py-2 border-t truncate cursor-pointer hover:bg-gray-200 w-full"
+				class="block px-4 py-2 border-t truncate cursor-pointer hover:bg-gray-200 w-full"
                 tabindex="0"
 				v-for="code in results"
 				:key="code.$index"
                 @click="selectCode(code)"
-			>{{code.code}} - {{code.title}}</li>
+			>{{code.title}}</li>
 		</ul>
 	</div>
 </template>

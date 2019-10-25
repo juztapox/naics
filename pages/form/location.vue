@@ -27,7 +27,7 @@
 
 			<div class="flex mt-10">
 				<button
-					@click="completeStep('/form/search')"
+					@click="completeStep('/form/operations')"
 					class="ml-auto rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600"
 				>
 					Search

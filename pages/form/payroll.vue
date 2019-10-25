@@ -37,7 +37,7 @@
 				<div class="flex mt-16">
 					<button
 						@click="completeStep('/form/payroll')"
-						class="rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600"
+						class="rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600 ml-auto"
 					>
 						Review
 						<i class="fa fa-chevron-right ml-1"></i>
