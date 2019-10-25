@@ -9,7 +9,7 @@ const port = 3001;
 app.use(cors());
 app.use(express.json());
 
-let vm = 'https://vm104.datacubes.io'
+let vm = 'http://localhost'
 
 // Routes
 app.get("/", (req, res) => {
