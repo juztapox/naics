@@ -1,0 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+@import '~/assets/css/d3styles';
+
+@import 'tailwindcss/utilities';

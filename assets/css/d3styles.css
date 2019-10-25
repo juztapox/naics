@@ -1,0 +1,34 @@
+/* Layout */
+
+.form-container {
+    @apply flex flex-grow;
+}
+
+.form-main {
+    @apply w-3/5 px-16;
+}
+
+.form-main-full {
+    @apply w-full pl-16;
+}
+
+
+.form-aside {
+    @apply w-2/5 ml-auto text-gray-700;
+}
+
+
+/* Form elements */
+
+.text-input {
+	@apply w-full border border-gray-400 rounded py-2 px-3 h-12 text-gray-800;
+}
+
+.text-input:focus {
+    /* color: red; */
+    @apply outline-none shadow-outline;
+}
+
+.text-input-sm {
+    @apply h-10;
+}
