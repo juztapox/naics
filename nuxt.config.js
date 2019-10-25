@@ -16,7 +16,7 @@ export default {
     ],
     script: [
         {
-         src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCWESZu0f73Z9LH9oftita6H-PBxF8IIDE&libraries=places'
+         src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyArm4R5-OH2OoIs2SNnzG4A8WnnWe5gTm8&libraries=places'
         }
       ]    
   },
