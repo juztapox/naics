@@ -58,6 +58,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+      host: '0.0.0.0'
   },
   /*
   ** Build configuration
