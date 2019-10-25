@@ -15,12 +15,7 @@
 				>
 					<div class="w-1/2 text-sm text-gray-700 font-medium">{{code.description}}</div>
 					<div class="w-1/6">
-						<input
-							type="number"
-							class="text-input text-input w-32"
-							:value="code.employees"
-							@input="updateCode('employees', $event.target.value, index)"
-						/>
+                    {{}}
 					</div>
 					<div class="flex items-center w-2/6 pl-2">
 						<input
@@ -37,7 +32,7 @@
 				<div class="flex mt-16">
 					<button
 						@click="completeStep('/form/payroll')"
-						class="rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600"
+						class="rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600 "
 					>
 						Review
 						<i class="fa fa-chevron-right ml-1"></i>

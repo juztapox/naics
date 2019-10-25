@@ -19,8 +19,8 @@ export default {
 		SidebarLink
 	},
     computed: {
-        list: sync('steps/list')
-    }
+        list: sync('steps/list'),
+    },
 }
 </script>
 
