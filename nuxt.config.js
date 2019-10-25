@@ -2,7 +2,8 @@
 export default {
   mode: 'universal',
   server: {
-      host: '0.0.0.0'
+      host: '0.0.0.0',
+      port: '3001'
   },
   /*
   ** Headers of the page
