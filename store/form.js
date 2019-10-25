@@ -63,7 +63,7 @@ const actions = {
 	getSuggestions(context, code) {
 		let root = code.toString().substring(0, 3)
 		this.$axios
-			.get(`http://localhost:3001/below?query=${root}`)
+			.get(`/below?query=${root}`, {port: 3001})
 			.then(res => {
 				res = res.data.map(suggestion => {
                     let ref_code = code;
@@ -78,7 +78,7 @@ const actions = {
             desc_text: state.description_operations
         };
 		return this.$axios
-			.post(`http://localhost:3001/wcc`, payload)
+			.post(`/wcc`, payload, {port: 3001})
 			.then(res => {
                 commit('UPDATE_OPERATIONS', res.data)
 			})

@@ -9,8 +9,6 @@ const port = 3001;
 app.use(cors());
 app.use(express.json());
 
-let vm = 'http://localhost'
-
 // Routes
 app.get("/", (req, res) => {
     let results = NAICS.search(req.query.query);
@@ -42,7 +40,7 @@ app.get("/above", (req, res) => {
 });
 
 app.post("/wcc", (req, res) => {
-    axios.post(`${vm}/rest/wcc`, req.body)
+    axios.post(`http://localhost/rest/wcc`, req.body)
     .then(r=>{
         return res.json(r.data);
     })
