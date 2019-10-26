@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100">
+  <div class="bg-gray-50">
     <TopNav></TopNav>
     <nuxt />
   </div>
@@ -16,7 +16,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background: #f7fafc;
+  background: #F7F7F7;
 }
 
 *,

@@ -13,7 +13,7 @@
 					:key="code.code"
 					class="flex py-5 border-t first:border-t-0 items-center"
 				>
-					<div class="w-1/2 text-sm text-gray-700 font-medium">{{code.description}}</div>
+					<div class="w-1/2 text-sm text-gray-700 font-medium pr-10">{{code.code}} - {{code.description}}</div>
 					<div class="w-1/6">
 						<input
 							type="number"
@@ -29,7 +29,7 @@
 							:value="code.payroll"
 							@input="updateCode('payroll', $event.target.value, index)"
 						/>
-						<a href class="text-gray-500 ml-10" @click="removeCode(code)">
+						<a class="text-gray-500 ml-10 cursor-pointer hover:text-gray-600" @click="removeCode(code)">
 							<i class="fa fa-times-circle"></i>
 						</a>
 					</div>
@@ -37,7 +37,7 @@
 				<div class="flex mt-16">
 					<button
 						@click="completeStep('/form/payroll')"
-						class="rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600 ml-auto"
+						class="rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600 ml-auto"
 					>
 						Review
 						<i class="fa fa-chevron-right ml-1"></i>
@@ -72,7 +72,8 @@ export default {
 			this.$store.set(`form/operations@${index}.${key}`, value)
 		},
 		removeCode(code) {
-			this.$store.commit('REMOVE_OPERATION', code)
+            console.log('removing code', code.code);
+			this.$store.commit('form/REMOVE_OPERATION', code)
 		}
 	}
 }

@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto flex mt-16">
+	<div class="container mx-auto flex mt-16 pb-10">
 		<Sidebar class="sidebar-container"></Sidebar>
         <div class="form-view w-5/6">
 		    <nuxt-child />

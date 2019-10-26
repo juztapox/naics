@@ -2,7 +2,7 @@
 	<div class="input-location">
 		<i class="fa fa-map-marker text-gray-400"></i>
 		<input
-			type="text"
+			type="search"
 			ref="autocomplete"
 			placeholder="Search for an address"
 			class="text-input pl-10"
@@ -14,9 +14,9 @@
 <script>
 export default {
     props: ['address'],
-    computed: {
-        localAddress() {
-            return this.address 
+    data() {
+        return {
+            localAddress: ''
         }
     },
 	mounted() {

@@ -16,3 +16,4 @@ Vue.directive('click-outside', {
         document.body.removeEventListener('click', el.clickOutsideEvent);
     }
 });
+

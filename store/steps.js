@@ -5,27 +5,33 @@ function state() {
 		list: [
 			{
 				title: 'General',
-				path: '/form/general'
+                path: '/form/general',
+                completed: false
 			},
 			{
 				title: 'Location',
-				path: '/form/location'
+                path: '/form/location',
+                completed: false
 			},
 			{
 				title: 'Operations',
-				path: '/form/operations',
+                path: '/form/operations',
+                completed: false
             },
             {
                 title: 'Description',
-                path: '/form/description'
+                path: '/form/description',
+                completed: false
 			},
 			{
 				title: 'Payroll',
-				path: '/form/payroll'
+                path: '/form/payroll',
+                completed: false
 			},
 			{
 				title: 'Review',
-				path: '/form/review'
+                path: '/form/review',
+                completed: false
 			}
 		]
 	}

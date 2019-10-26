@@ -1,4 +1,5 @@
 const vm = 'vm104.datacubes.io';
+let googleApiKey = process.env.NODE_ENV == 'production' ? 'AIzaSyArm4R5-OH2OoIs2SNnzG4A8WnnWe5gTm8' : 'AIzaSyCWESZu0f73Z9LH9oftita6H-PBxF8IIDE';
 
 export default {
   mode: 'universal',
@@ -21,7 +22,7 @@ export default {
     ],
     script: [   
         {
-         src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyArm4R5-OH2OoIs2SNnzG4A8WnnWe5gTm8&libraries=places'
+         src: `https://maps.googleapis.com/maps/api/js?key=${googleApiKey}&libraries=places`
         }
       ]    
   },
@@ -38,7 +39,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/directives.js'
+    '~/plugins/directives.js',
+    '~/plugins/vue-the-mask',
+    '~/plugins/currency'
   ],
   /*
   ** Nuxt.js dev-modules

@@ -6,15 +6,17 @@
 			</InputText>
 			<div class="flex mt-10">
 				<button
+                    :disabled="!description_operations.length"
 					@click="completeStep('/form/payroll')"
-					class="ml-auto rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600"
+					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
+                    :class="{'opacity-50': !description_operations.length}"
 				>
 					Payroll
 					<i class="fa fa-chevron-right ml-1"></i>
 				</button>
 			</div>
 		</div>
-		<aside class="form-aside text-sm">
+		<aside class="form-aside text-sm leading-snug">
             <p>Describe your primary services or products, including your methods of operations. Include raw and semifinished materials used, machinery, equipment and tools.</p>
             <p class="mt-6"><strong>Note:</strong> It is important for you to provide as much information as possible for BWC to properly determine your correct classification.</p>
 		</aside>

@@ -1,9 +1,9 @@
 <template>
-	<div class="border-b-4 border-orange-500">
+	<div class="border-b-4 border-brand-500">
 		<div class="container m-auto flex items-center py-4">
 			<img src="~/assets/ohio_logo.png" alt />
 			<div class="ml-auto">
-				<ul class="flex text-center text-lg font-bold text-orange-500">
+				<ul class="flex text-center text-lg font-bold text-brand-500">
 					<li>
 						<i class="fa fa-search"></i>
 						<div>Search</div>

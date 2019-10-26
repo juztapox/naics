@@ -55,7 +55,7 @@ const mutations = {
         state.operations = payload
     },
     REMOVE_OPERATION(state, payload){
-        state.operations = state.operations.filter(op=>{op.code != payload.code})
+        state.operations = state.operations.filter(op=> op.code != payload.code)
     }
 }
 

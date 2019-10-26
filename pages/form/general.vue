@@ -9,14 +9,44 @@
 				label="Business Entity Type"
 				info="Entity type that best describes your corporate structure"
 			>
-				<input type="text" class="text-input" v-model="business_entity" />
+				<div class="block relative">
+					<select
+						v-model="business_entity"
+						class="block appearance-none h-12 w-full bg-white border border-gray-200 hover:border-gray-300 px-4 py-2 pr-8 rounded shadow leading-tight text-gray-800 focus:outline-none focus:shadow-outline"
+					>
+						<option value>Select a business entity type</option>
+						<option value="Domestic household">Domestic household</option>
+						<option value="Sole proprietor">Sole proprietor</option>
+						<option value="Partnership">Partnership</option>
+						<option value="Limited partnership">Limited partnership</option>
+						<option
+							value="Limited liability company acting as a sole proprietor"
+						>Limited liability company acting as a sole proprietor</option>
+						<option
+							value="Limited liability company acting as a partnership"
+						>Limited liability company acting as a partnership</option>
+						<option value="Partnership">Limited liability company acting as a corporation</option>
+						<option value="Partnership">Corporation</option>
+						<option value="Partnership">Individual incorporated as a corporation</option>
+						<option value="Partnership">Family farm corporation</option>
+						<option value="Partnership">Association</option>
+						<option value="Partnership">State/Local government</option>
+					</select>
+					<div
+						class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+					>
+						<svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+							<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+						</svg>
+					</div>
+				</div>
 			</InputText>
 
 			<!-- Two col -->
 			<div class="mt-10 or-inputs flex">
 				<div>
 					<InputText class label="FEIN" info="Fed employer identification">
-						<input type="text" class="text-input" v-model="fein" />
+						<input type="text" class="text-input" v-mask="'##-#######'" v-model="fein" />
 					</InputText>
 				</div>
 				<span class="or">
@@ -24,7 +54,7 @@
 				</span>
 				<div>
 					<InputText class label="Social Security #" info="Required if no FEIN">
-						<input type="text" class="text-input" v-model="ssn" />
+						<input type="text" class="text-input" v-mask="'###-##-####'" v-model="ssn" />
 					</InputText>
 				</div>
 			</div>
@@ -37,15 +67,15 @@
 				<input type="date" class="text-input" v-model="state_date" />
 			</InputText>
 
-            <div class="flex mt-10">
-                <button @click="completeStep('/form/location')"
-                 class="ml-auto rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600">
-                    Operations
-                    <i class="fa fa-chevron-right ml-1"></i>
-                </button>
-            </div>
-
-
+			<div class="flex mt-10">
+				<button
+					@click="completeStep('/form/location')"
+					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
+				>
+					Operations
+					<i class="fa fa-chevron-right ml-1"></i>
+				</button>
+			</div>
 		</div>
 		<aside class="form-aside text-sm leading-snug">
 			<p
@@ -74,13 +104,13 @@ export default {
 	components: { InputText },
 	computed: {
 		...sync('form/*')
-    },
-    methods: {
-        completeStep(path){
-            this.$store.commit('steps/COMPLETE_STEP', '/form/general')
-            this.$router.push(path)
-        }
-    }
+	},
+	methods: {
+		completeStep(path) {
+			this.$store.commit('steps/COMPLETE_STEP', '/form/general')
+			this.$router.push(path)
+		}
+	}
 }
 </script>
 

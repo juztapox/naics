@@ -7,11 +7,11 @@
 
 			<div class="flex mt-10">
 				<InputText label="Phone" class="w-full">
-					<input type="text" class="text-input" v-model="phone" />
+					<input type="text" class="text-input" v-mask="'(###)-###-####'" placeholder="(555)-867-5309" v-model="phone" />
 				</InputText>
 				<div class="spacer"></div>
 				<InputText label="Fax" class="w-full">
-					<input type="text" class="text-input" v-model="fax" />
+					<input type="text" class="text-input" v-mask="'(###)-###-####'" placeholder="(800)-588-2300" v-model="fax" />
 				</InputText>
 			</div>
 
@@ -28,7 +28,7 @@
 			<div class="flex mt-10">
 				<button
 					@click="completeStep('/form/operations')"
-					class="ml-auto rounded px-4 py-2 bg-orange-500 text-white hover:bg-orange-600"
+					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
 				>
 					Search
 					<i class="fa fa-chevron-right ml-1"></i>
@@ -61,7 +61,6 @@ export default {
 	components: { InputLocation, InputText },
 	methods: {
 		getAddressData(address) {
-			console.log(address)
 			this.$store.set('form/address', address.formatted_address)
         },
         completeStep(path){

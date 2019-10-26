@@ -6,7 +6,7 @@
 				<p class="mb-8 text-gray-600 text-lg">Give me a subtitle</p>
 				<nuxt-link
 					to="/form/general"
-					class="border-orange-500 hover:border-orange-600 border px-4 py-2 rounded text-orange-100 hover:text-white bg-orange-500 hover:bg-orange-600 shadow"
+					class="border-brand-500-500-500 hover:border-brand-500-500-600 border px-4 py-2 rounded text-orange-100 hover:text-white bg-brand-500 hover:bg-brand-600 shadow"
 				>Begin Demo</nuxt-link>
 			</div>
 		</div>

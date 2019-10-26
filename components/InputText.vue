@@ -1,8 +1,11 @@
 <template>
 	<div>
-		<label v-if="label" class="text-gray-900 font-bold">{{label}}</label>
-		<div class="text-sm text-gray-600 mb-4" v-if="info">{{info}}</div>
-		<slot></slot>
+		<label v-if="label" class="text-gray-800 font-bold">{{label}}</label>
+		<div class="text-sm text-gray-600" v-if="info">{{info}}</div>
+		<div class="mt-3">
+            <slot></slot>
+        </div>
+        
 	</div>
 </template>
 
