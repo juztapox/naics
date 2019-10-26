@@ -1,3 +1,4 @@
+const vm = 'vm104.datacubes.io';
 
 export default {
   mode: 'universal',
@@ -59,8 +60,8 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-      host:  process.env.NODE_ENV == 'production' ? '192.168.2.104' : 'localhost',
-      HOST: process.env.NODE_ENV == 'production' ? '192.168.2.104' : 'localhost',
+      host:  process.env.NODE_ENV == 'production' ? vm : 'localhost',
+      HOST: process.env.NODE_ENV == 'production' ? vm : 'localhost',
       port: '3001',
       PORT: '3001'
   },
