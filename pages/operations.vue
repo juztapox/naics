@@ -13,7 +13,7 @@
 					:key="code.$index"
 				>
 					{{code.title}}
-					<a class="remove-button" @click="removeCode(code)">
+					<a class="remove-button" @click.prevent="removeCode(code)">
 						<i class="fa fa-trash"></i>
 					</a>
 				</div>
@@ -22,7 +22,7 @@
 			<div class="flex mt-10">
 				<button
                     v-show="naics_codes.length"
-					@click="completeStep('/form/description')"
+					@click="completeStep('/description')"
 					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
 				>
 					Description
@@ -80,7 +80,7 @@ export default {
 			this.$store.commit('form/REMOVE_SUGGESTIONS_BY_REF_CODE', code.code)
 		},
 		completeStep(path) {
-			this.$store.commit('steps/COMPLETE_STEP', '/form/operations')
+			this.$store.commit('steps/COMPLETE_STEP', '/operations')
 			this.$router.push(path)
 		}
 	}

@@ -17,6 +17,15 @@
 					<div class="w-1/6 pl-2 text-right">{{code.payroll | currency}}</div>
 				</div>
 			</div>
+			<div class="flex mt-16">
+				<button
+					@click="startOver"
+					class="rounded px-4 py-2 bg-brand-500 text-white hover:bg-orange-600 ml-auto"
+				>
+					Start Over
+					<i class="fa fa-undo ml-1"></i>
+				</button>
+			</div>
 		</div>
 	</div>
 </template>
@@ -38,7 +47,7 @@ export default {
 	methods: {
 		completeStep(path) {
 			this.$store.commit('steps/COMPLETE_STEP', path)
-			this.$router.push('/form/review')
+			this.$router.push('/review')
 		},
 		updateCode(key, value, index) {
 			// console.log(e);
@@ -46,7 +55,10 @@ export default {
 		},
 		removeCode(code) {
 			this.$store.commit('REMOVE_OPERATION', code)
-		}
+        },
+        startOver(){
+            window.location.href = "/"
+        }
 	}
 }
 </script>

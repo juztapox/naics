@@ -27,7 +27,7 @@
 
 			<div class="flex mt-10">
 				<button
-					@click="completeStep('/form/operations')"
+					@click="completeStep('/operations')"
 					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
 				>
 					Operations
@@ -64,7 +64,7 @@ export default {
 			this.$store.set('form/address', address.formatted_address)
         },
         completeStep(path){
-            this.$store.commit('steps/COMPLETE_STEP', '/form/location')
+            this.$store.commit('steps/COMPLETE_STEP', '/location')
             this.$router.push(path)
         }        
 	},

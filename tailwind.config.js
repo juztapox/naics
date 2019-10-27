@@ -35,6 +35,8 @@ module.exports = {
 			default: theme('colors.gray.100', 'currentColor')
 		})
 	},
-	variants: {},
+	variants: {
+        borderWidth: ['responsive', 'first', 'hover', 'focus'],
+    },
 	plugins: []
 }

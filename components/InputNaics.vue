@@ -3,13 +3,13 @@
 		<div class="input-naics">
 			<i class="fa fa-search text-gray-400"></i>
 			<input type="text" class="text-input pl-12" @input="searchNaics" v-on:keyup.enter="searchNaics" ref="searchInput" placeholder="Search one word at a time e.g. 'restaurant'" />
-            <a href="" class="text-gray-400 hover:text-gray-600" @click="clearSearch">
+            <a href class="text-gray-200 hover:text-gray-400" @click.prevent="clearSearch()">
                 <i class="fa fa-times" v-show="currentSearchValue"></i>
             </a>
 		</div>
 		<ul v-if="results.length" class="results overflow-hidden absolute relative mt-2 bg-white rounded-lg shadow-xl" aria-haspopup="true">
 			<li
-				class="block px-4 py-2 border-t truncate cursor-pointer hover:bg-gray-200 w-full"
+				class="naics-result block px-4 py-2 border-t first:border-t-0 truncate cursor-pointer hover:bg-gray-200 w-full"
                 tabindex="0"
 				v-for="code in results"
 				:key="code.$index"
@@ -42,6 +42,7 @@ export default {
     },
 	methods: {
 		async searchNaics(e) {
+            console.log('searching naics');
             this.currentSearchValue = e.target.value;
 			let combined = []
 			let query = e.target.value
@@ -104,4 +105,8 @@ i.fa-times {
 .results a {
 	/* width: 800px; */
 }
+
+/* .naics-result:first-of-type{
+    border-top: none;
+} */
 </style>

@@ -32,14 +32,14 @@
 							:value="code.payroll"
 							@input="updateCode('payroll', $event.target.value, index)"
 						/>
-						<a class="text-gray-500 ml-10 cursor-pointer hover:text-gray-600" @click="removeCode(code)">
+						<a class="text-gray-500 ml-10 cursor-pointer hover:text-gray-600" @click.prevent="removeCode(code)">
 							<i class="fa fa-times-circle"></i>
 						</a>
 					</div>
 				</div>
 				<div class="flex mt-16">
 					<button
-						@click="completeStep('/form/payroll')"
+						@click="completeStep('/payroll')"
 						class="rounded px-4 py-2 bg-brand-500 text-white hover:bg-orange-600 ml-auto"
 					>
 						Review
@@ -68,7 +68,7 @@ export default {
 	methods: {
 		completeStep(path) {
 			this.$store.commit('steps/COMPLETE_STEP', path)
-			this.$router.push('/form/review')
+			this.$router.push('/review')
 		},
 		updateCode(key, value, index) {
 			// console.log(e);

@@ -7,7 +7,7 @@
 			<div class="flex mt-10">
 				<button
                     :disabled="!description_operations.length"
-					@click="completeStep('/form/payroll')"
+					@click="completeStep('/payroll')"
 					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
                     :class="{'opacity-50': !description_operations.length}"
 				>
@@ -41,7 +41,7 @@ export default {
         completeStep(path){
             this.$store.dispatch('form/getWCC')
             .then(()=>{
-                this.$store.commit('steps/COMPLETE_STEP', '/form/description')
+                this.$store.commit('steps/COMPLETE_STEP', '/description')
                 this.$router.push(path)
             })
         }
