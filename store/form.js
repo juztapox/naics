@@ -18,7 +18,9 @@ function state() {
 		naics_codes: [],
 		suggestions: [],
 		description_operations: '',
-		operations: []
+		operations: [
+            {code: null, description: 'Clerical', employees: 0, payroll: 0}
+        ]
 	}
 }
 
@@ -52,7 +54,8 @@ const mutations = {
         state.suggestions = state.suggestions.filter(suggestion=>suggestion.ref_code != code)
     },
     UPDATE_OPERATIONS(state, payload){
-        state.operations = payload
+        let set = new Set([...payload, ...state.operations])
+        state.operations = Array.from(set)
     },
     REMOVE_OPERATION(state, payload){
         state.operations = state.operations.filter(op=> op.code != payload.code)

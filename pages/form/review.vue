@@ -8,18 +8,13 @@
 					<div class="w-1/6 text-right">Employees</div>
 					<div class="w-1/6 pl-2 text-right">Payroll</div>
 				</div>
-				<div
-					v-for="code in operations"
-					:key="code.code"
-					class="flex py-5 border-t first:border-t-0"
-				>
-					<div class="w-2/3 text-sm text-gray-700 font-medium pr-10">{{code.description}}</div>
-					<div class="w-1/6 text-right">
-                        {{code.employees}}
+				<div v-for="code in operations" :key="code.code" class="flex py-5 border-t first:border-t-0">
+					<div class="w-2/3 text-sm text-gray-700 font-medium pr-10">
+						<span v-if="code.code">{{code.code}} -</span>
+						{{code.description}}
 					</div>
-					<div class="w-1/6 pl-2 text-right">
-                        {{code.payroll | currency}}
-					</div>
+					<div class="w-1/6 text-right">{{code.employees}}</div>
+					<div class="w-1/6 pl-2 text-right">{{code.payroll | currency}}</div>
 				</div>
 			</div>
 		</div>

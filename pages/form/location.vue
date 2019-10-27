@@ -30,7 +30,7 @@
 					@click="completeStep('/form/operations')"
 					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
 				>
-					Search
+					Operations
 					<i class="fa fa-chevron-right ml-1"></i>
 				</button>
 			</div>

@@ -43,18 +43,10 @@
 			</InputText>
 
 			<!-- Two col -->
-			<div class="mt-10 or-inputs flex">
+			<div class="mt-10">
 				<div>
 					<InputText class label="FEIN" info="Fed employer identification">
 						<input type="text" class="text-input" v-mask="'##-#######'" v-model="fein" />
-					</InputText>
-				</div>
-				<span class="or">
-					<span class="text-gray-600">or</span>
-				</span>
-				<div>
-					<InputText class label="Social Security #" info="Required if no FEIN">
-						<input type="text" class="text-input" v-mask="'###-##-####'" v-model="ssn" />
 					</InputText>
 				</div>
 			</div>
@@ -72,7 +64,7 @@
 					@click="completeStep('/form/location')"
 					class="ml-auto rounded px-4 py-2 bg-brand-500 text-white hover:bg-brand-600"
 				>
-					Operations
+					Location
 					<i class="fa fa-chevron-right ml-1"></i>
 				</button>
 			</div>
