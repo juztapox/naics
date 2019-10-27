@@ -7,7 +7,7 @@ function state() {
 		business_entity: '',
 		fein: '',
 		ssn: '',
-		state_date: '',
+		start_date: new Date(),
 		address: '',
 		mailing_address_same: '',
 		additional_locations: [],

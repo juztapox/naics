@@ -126,6 +126,7 @@ export default {
 }
 
 .form-aside {
-    height: 460px
+    height: 460px;
+    position: relative;
 }
 </style>

@@ -41,7 +41,9 @@ export default {
   plugins: [
     '~/plugins/directives.js',
     '~/plugins/vue-the-mask',
-    '~/plugins/currency'
+    '~/plugins/currency',
+    { src: '~/plugins/v-calendar', mode: 'client' }
+
   ],
   /*
   ** Nuxt.js dev-modules

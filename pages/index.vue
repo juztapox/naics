@@ -56,7 +56,15 @@
 				label="Start Date"
 				info="Date employees first earned wages. If no employees use today."
 			>
-				<input type="date" class="text-input" v-model="state_date" />
+				<v-date-picker
+					mode="single"
+					color="orange"
+					v-model="start_date"
+					:input-props='{
+                        class: "text-input",
+                        placeholder: "Select or enter a start date",
+                    }'
+				/>
 			</InputText>
 
 			<div class="flex mt-10">

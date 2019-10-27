@@ -2,7 +2,7 @@
 	<div class="sidebar-component">
 		<ul class="w-full">
 			<SidebarLink
-				v-for="step) in list"
+				v-for="step in list"
 				:key="step.path"
                 :step="step"
                 :steps="list"
