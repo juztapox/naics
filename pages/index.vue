@@ -60,6 +60,7 @@
 					mode="single"
 					color="orange"
 					v-model="start_date"
+                    :popover="{visibility: 'click' }"
 					:input-props='{
                         class: "text-input",
                         placeholder: "Select or enter a start date",
